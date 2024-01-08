@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Amanuel Anteneh personal webpage">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">  
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src='static/js/appBubbleScript.js'></script>
+    <script src='static/js/quoteChange.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+    <link rel="stylesheet" href='static/css/indexStyle.css'>       
+    <link rel="icon" href='static/img/websiteIcon.png'> <!--So you can change tab icon for each HTML file-->
+
+    <title>Amanuel Anteneh</title>
+</head>
+
+<body>
+    <header>
+    <!-- Navigation -->
+        <nav class="myNavbar">
+            <div class="name">\(\huge{A^{\dagger}}\)</div>
+            <a class="ham-menu"> <!--The hamburger menu-->
+                <span class="bar" id="bar1"></span> <!--The 3 lines in the ham menu-->
+                <span class="bar" id="bar2"></span>
+                <span class="bar" id="bar3"></span> 
+            </a>
+            <!--<img src='static/img/logo.png' alt="home" width="0" height="0">-->
+            <div class="navButtons">
+            <ul class="button-list"> <!--Naming this ul so the css for it doesn't overlap with the css for the dropdown menu ul-->
+                <li class="navBar-li" id="home"><a href="#homePage" style="text-decoration:none;color: white;"
+                    onmouseover='this.style.textDecoration="underline"'
+                    onmouseout='this.style.textDecoration="none"'> <!--Setting class of these li's to differentiate them from the li on the simulate page in the js file and setting the id for a similar reason -->
+                    <img src='static/img/homeIcon.png' alt="home" width="25" height="25">
+                    Home
+                    </a>
+                </li>
+                <li class="navBar-li" id="about"><a href="#aboutPage" style="text-decoration:none;color: white;"
+                    onmouseover='this.style.textDecoration="underline"'
+                    onmouseout='this.style.textDecoration="none"'>
+                    <img src='static/img/about.png' alt="about" width="23" height="23">
+                    About
+                    </a>
+                </li>
+                <li class="navBar-li" id="research"><a href="#researchPage" style="text-decoration:none;color: white;"
+                    onmouseover='this.style.textDecoration="underline"'
+                    onmouseout='this.style.textDecoration="none"'>
+                    <img src='static/img/orbit.png' alt="research" width="30" height="30">
+                    Research
+                    </a>
+                </li>
+                <li class="navBar-li" id="simulate"><a href="#simulatePage" style="text-decoration:none;color: white;"
+                    onmouseover='this.style.textDecoration="underline"'
+                    onmouseout='this.style.textDecoration="none"'>
+                    <img src='static/img/viz.png' alt="simulators" width="23" height="23"> 
+                    Visuals
+                    </a>
+                </li>                
+                <li class="navBar-li" id="cv-github"><a >
+                    <img id="cv-github-arrow" src='static/img/arrowDownIcon.png' alt="other" width="15" height="15"> 
+                    Work
+                </a>
+                     <ul id="cv-github-menu" class="menu"> <!--Changed from bootstrap dropdown class to make less disorientating for trevor--> 
+                       
+                       <li onclick="window.open('https://github.com/amanuelanteneh')" style="text-decoration:none;color: white;"
+                       onmouseover='this.style.textDecoration="underline"'
+                       onmouseout='this.style.textDecoration="none"'><i class="fab fa-github"></i>
+                            <span class="caption">GitHub</span>
+                        </li>
+                        <li onclick="window.open('https://www.linkedin.com/in/amanuel-a-5926631a1')" style="text-decoration:none;color: white;"
+                        onmouseover='this.style.textDecoration="underline"'
+                        onmouseout='this.style.textDecoration="none"'><i class="fab fa-linkedin-in"></i>
+                            <span class="caption">LinkedIn</span>
+                        </li>
+                        <li onclick="window.open('https://scholar.google.com/citations?hl=en&user=buBdqwIAAAAJ&view_op=list_works&authuser=1&gmla=AJsN-F5xOtZTWooIPTuRhKEKCIMPRkPxtxpLh8lCVkNnmohNNIZWxXexLAOCrglIeqNLQww-elPclc8UMOBGuAFzP1t8vzR1b2oVSWb3I2IKV1vUFo2J1Pc')" 
+                        style="text-decoration:none;color: white;"
+                        onmouseover='this.style.textDecoration="underline"'
+                        onmouseout='this.style.textDecoration="none"'>
+                            <img src='static/img/google.png' alt="essays" width="25" height="25">
+                            <span class="caption">Google<br>Scholar</span>
+                        </li>
+                    </ul>
+                </li>                
+                <li class="navBar-li" id="pdfs"><a>
+                    <img id="pdfs-arrow" src='static/img/arrowDownIcon.png' alt="other" width="15" height="15"> 
+                    PDFs
+                </a>
+                    <ul id="pdfs-menu" class="menu"> 
+                       <li onclick="window.open('static/Math_Reference_Sheet.pdf')" style="text-decoration:none;color: white;"
+                       onmouseover='this.style.textDecoration="underline"'
+                       onmouseout='this.style.textDecoration="none"'>
+                       <img src='static/img/doc.png' alt="CV" width="25" height="25">
+                          <span class="caption">Math<br>Reference</span>
+                        </li>
+                       <li onclick="window.open('static/Matlab_Reference_Sheet.pdf')" style="text-decoration:none;color: white;"
+                       onmouseover='this.style.textDecoration="underline"'
+                       onmouseout='this.style.textDecoration="none"'>
+                       <img src='static/img/doc.png' alt="essays" width="25" height="25">
+                            <span class="caption">Matlab<br>Reference</span>
+                        </li>
+                       <li onclick="window.open('static/Mathematica_Reference_Sheet.pdf')" style="text-decoration:none;color: white;"
+                       onmouseover='this.style.textDecoration="underline"'
+                       onmouseout='this.style.textDecoration="none"'>
+                       <img src='static/img/doc.png' alt="essays" width="25" height="25">
+                            <span class="caption">Mathematica<br>Reference</span>
+                        </li>                    
+                    </ul>
+                </li>
+                <li class="navBar-li" id="interests"><a>
+                    <img id="interests-arrow" src='static/img/arrowDownIcon.png' alt="other" width="15" height="15"> 
+                    Other
+                </a>
+                <ul id="interests-menu" class="menu">
+                    <li><a href="introQC.html" style="text-decoration:none;color: white;"
+                        onmouseover='this.style.textDecoration="underline"'
+                        onmouseout='this.style.textDecoration="none"'>
+                        <img src='static/img/qubitIcon.png' alt="ppl" width="25"
+                        height="25">
+                    <span class="caption">QC</span></a>
+                    </li>
+                    <li><a href="music.html" style="text-decoration:none;color: white;"
+                        onmouseover='this.style.textDecoration="underline"'
+                        onmouseout='this.style.textDecoration="none"'>
+                        <img src='static/img/musicIcon.png' alt="essays" width="25"
+                                height="25">
+                            <span class="caption">Music</span></a>
+                    </li>
+                    <li><a href="games.html" style="text-decoration:none;color: white;"
+                        onmouseover='this.style.textDecoration="underline"'
+                        onmouseout='this.style.textDecoration="none"'>
+                        <img src='static/img/gameIcon.png' alt="ppl" width="25"
+                        height="25">
+                    <span class="caption">Games</span></a>
+                    </li>
+                    <!--<li><a href="books.html"style="text-decoration:none;color: white;"
+                        onmouseover='this.style.textDecoration="underline"'
+                        onmouseout='this.style.textDecoration="none"'>
+                        <img src='static/img/bookIcon.png' alt="books" width="25"
+                                height="25">
+                            <span class="caption">Books</span></a>
+                    </li>
+                    <li><a href="essays.html" style="text-decoration:none;color: white;"
+                        onmouseover='this.style.textDecoration="underline"'
+                        onmouseout='this.style.textDecoration="none"'>
+                        <img src='static/img/writingIcon.png' alt="essays" width="22"
+                                height="22">
+                            <span class="caption">Essays</span></a>
+                    </li>-->
+                </ul>
+                </li>
+                </ul>
+                </div>
+                </nav>
+                </header>
+                
+                <div id="particles-js" style="position:fixed; width:100%; height: 100%; z-index:-10; background-image: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);"></div>
+
+<!-- Page 1 -->
+<div id="homePage">
+    <div id="floatingQuote">   
+        <img id="headshot" style="border-radius:50%; border:2px solid; height:25vmin; width:25vmin;" src='static/img/me.png'
+         alt="headshot" width="100" height="100" >
+        <p style="font-size: 6vmin;">Amanuel Anteneh</p><p>•Software Engineer•<br>•Research Scientist•</p>
+        <p id="sagan" style="font-size: 6vmin;">
+        <a href="https://youtu.be/XGK84Poeynk?si=6tiWUu41fyyD7PUl" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>
+        <i><br><br><br>"Somewhere, something incredible is waiting to be known."</i><br></p></a>
+    </div>
+</div>
+
+<!-- Page 2 -->
+<div id="aboutPage">
+    <div class="bio">
+        <b style="font-size: 1.6rem;"><!--<img src='static/img/work.png' alt="work" width="35" height="35">--> Experience</b><br>
+        I work full time as a software engineer primarily working on machine learning and data analytics 
+        software using tools like Python, AWS Cloud, and docker. Outside of my full time job I do research as 
+        an independent research 
+        scientist. My research work is largely interdisciplinary and is at the intersection of quantum computing, 
+        AI/ML and network science. 
+        I also try to contribute to <a href="https://openscience.org/about-openscience/" 
+        target="_blank" style="text-decoration:none;color: white;" 
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>
+        open source scientific software</a> 
+        such as <a href="https://qutip.org/" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>
+        QuTiP</a>.  
+        
+        <br><br><b style="font-size: 1.6rem;"> Education </b><br>
+        <img src='static/img/uva.png' alt="uva" width="30" height="30"> I hold a B.S. in computer science and 
+        physics with a minor in math from the University of Virginia. While there I completed my
+        <a href="https://csdmp.github.io/graduates/" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>distinguished major thesis</a>
+        on machine learning, quantum computing & network science.<br>
+        <img src='static/img/gt.png' alt="gt" width="40" height="40"> I'm currently pursuing a M.S. in computer science focused on machine learning
+        at the Georgia Institute of Technology. 
+
+        <br><br><b style="font-size: 1.6rem;"> Honors</b><br>
+        • University of Virginia Echols Scholar, 2019<br>
+        • University of Virginia Computer Science B.A. - Highest distinction, 2022<br>
+        • University of Virginia Physics B.S. - Distinction, 2022
+        <!--<br><br><b><u>Fun:</u></b><br>
+        In my free time I enjoy watching TV shows, going to the gym, listening to music & going to concerts.--> 
+    </div>
+</div>
+
+<!-- Page 3 -->
+<div id="researchPage">
+    <div class="bio">
+        <u>Research Areas & Interests:</u><br>
+        <img src='static/img/mlIcon.png' alt="ml" width="45" height="45"> <a href="https://en.wikipedia.org/wiki/Machine_learning" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>Machine<br>Learning</a><br><br>
+        
+        <img src='static/img/qubitIcon.png' alt="qc" width="45" height="45"> <a href="https://en.wikipedia.org/wiki/Quantum_computing" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>Quantum<br>Computing</a><br><br>
+        
+        <img src='static/img/beaker.png' alt="swe" width="35" height="35"> <a href="https://en.wikipedia.org/wiki/Computational_science" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>Scientific<br>Computing</a><br><br>
+
+        <img src='static/img/networkIcon.png' alt="netsci" width="45" height="45"> <a href="https://en.wikipedia.org/wiki/Network_science" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>Network<br>Science</a><br><br>
+
+        <img src='static/img/lineIntegralIcon.png' alt="mathphys" width="45" height="45"> <a href="https://en.wikipedia.org/wiki/Mathematical_physics" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>Mathematical<br>Physics</a><br><br>
+
+        <img src='static/img/paralellIcon.png' alt="hpc" width="45" height="45"> <a href="https://en.wikipedia.org/wiki/High-performance_computing" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>High Performance<br>Computing</a><br><br>
+
+        <img src='static/img/mathphysIcon.png' alt="hpc" width="40" height="40"> <a href="https://en.wikipedia.org/wiki/Mathematical_optimization" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>Mathematical<br>Optimization</a><br><br>
+
+        <img src='static/img/bayesIcon.png' alt="bayes" width="45" height="45"> <a href="https://en.wikipedia.org/wiki/Bayesian_statistics" 
+        target="_blank" style="text-decoration:none;color: white;"
+        onmouseover='this.style.textDecoration="underline"'
+        onmouseout='this.style.textDecoration="none"'>Bayesian<br>Statistics</a><br><br>
+    </div>
+</div>
+
+<!-- Page 4 -->
+<div id="simulatePage">
+    <div id="appBubble">
+        <b>Cool
+            Visualizers</b>
+            <ul>
+                <li>
+                    <img src='static/img/annealingIcon.png' alt="annealing" width="30"
+                            height="30"> <a onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"'
+                     href="annealing.html">Simulated Annealing
+                    </a>
+                </li>               
+                <li>
+                    <img src='static/img/psiIcon.png' alt="particle" width="30"
+                            height="30"> <a onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"'
+                     href="particleInBox.html">Particle in a Box
+                    </a>                    
+                </li>
+                <li>
+                    <img src='static/img/doubleIcon.png' alt="double" width="30" height="30"> <a onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"'
+                     href="doublePendulum.html">Double Pendulum
+                    </a>
+                </li>
+                <li>
+                    <img src='static/img/sphereIcon.png' alt="sphere" width="30" height="30"> <a onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"'
+                     href="riemannSphere.html">Riemann Sphere
+                    </a>
+                </li>
+                <li>
+                    <img src='static/img/singleIcon.png' alt="double" width="30" height="30"> <a onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"'
+                     href="simplePendulum.html">Simple Pendulum
+                    </a>
+                </li>                    
+                <li>
+                    <img src='static/img/discreteGroupIcon.png' alt="group" width="30" height="30"> <a onmouseover='this.style.textDecoration="underline"' onmouseout='this.style.textDecoration="none"'
+                     href="groupTheoryPhysics.html">Discrete Group Theory
+                    </a>
+                </li>
+                    </ul>
+                </div>
+            </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+                    crossorigin="anonymous"></script>
+                
+                <script src='static/js/particles.js'></script>
+                <script src='static/js/app.js'></script>
+                <script src='static/js/index.js' defer></script>
+                </body>
+                
+                </html>

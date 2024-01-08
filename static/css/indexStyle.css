@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  display: none; /* For Chrome */
+}
+body, html {
+  -ms-overflow-style: none;  /* For IE and Edge */
+  scrollbar-width: none;  /* For Firefox */
+  height: 100%;
+  color: #000;
+  z-index: -1;
+} 
+b {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navbar style start */
+header {
+  z-index: 2;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 2px; 
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.myNavbar {
+    display: flex;
+    width: 95%;
+    min-height: 8vh;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background: transparent;
+}
+
+.name {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+  }
+
+
+.navButtons { /* navbar items w/o a href */
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 60%;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;    
+}
+
+.navButtons .button-list { 
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navButtons li {
+  list-style: none;
+}
+.navButtons li a { /* navbar items with a href */
+  text-decoration: none;
+  padding: 0.8rem;
+  list-style: none;
+  color: white;
+}
+
+ul li ul { /* for dropdown */
+  visibility: hidden; 
+  opacity: 0;
+  transition: visibility 0.2s linear, opacity 0.2s linear; /* for animation */
+  position: absolute;
+  margin-top: 0rem;
+  left: inherit;
+  border: 2px solid white;
+  border-radius: 2px; 
+  padding: 0.5%; /* to pad inside of menu bubble */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  background: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);
+}
+
+.navButtons ul li ul li a { /* So theres no padding on dropdown items with href/anchor tag, basically overrides css rule for '.navButtons li a' */
+  padding: 0%;
+}
+
+ul li:hover > ul, /* for dropdown */
+ul li ul:hover {  /* on hover show drop down menu */
+  visibility: visible;
+  opacity: 1;
+}
+
+ul li ul li {  /* for dropdown */
+  clear: both;
+  width: 100%;
+}
+
+.caption {
+   display: block; /* to have text appear below icon */ 
+ }
+
+.ham-menu {
+  position: absolute;
+  top: 1.0rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.ham-menu .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+/* Navbar style end */
+/* First page (home) */
+#homePage {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    z-index: 1;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+/* Second page (about) */
+#aboutPage {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    justify-content: space-evenly;
+    align-items: center;
+
+    }
+#aboutPage .bio {
+    width: 100vmin;
+    height: 79vmin;
+    left: 0%;
+    top: 5%;
+    background: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.25vmin;
+    border: 2px solid;
+    line-height: 1.6;
+    border-radius: 15px;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */
+    scroll-behavior: smooth;
+  }
+
+#aboutPage .bio::-webkit-scrollbar{
+  display: none; /* For Chrome */
+  scroll-behavior: smooth;
+  
+}
+
+/* Third page (research) */
+#researchPage {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-evenly;
+  align-items: center;
+
+  }
+
+
+#researchPage .bio {
+    width: 75vmin;
+    height: 79vmin;
+    left: 0%;
+    top: 5%;
+    background: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.95vmin;
+    border: 2px solid;
+    line-height: 1.6;
+    border-radius: 15px;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */
+    scroll-behavior: smooth;
+  }
+
+
+/* Fourth page (simulators) */
+#simulatePage {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    z-index: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+/* @keyframes float {
+  0% {top: 36.5%}
+  50% {top: 38%}
+  100% {top: 36.5%}
+} */
+#floatingQuote {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4.5vmin;
+    border: 2px solid;
+    border-radius: 3px;
+    position: absolute;
+    text-align: center;
+    padding: 1%;
+    /*left: 40vw;*/
+    top: 29%;
+    height: 55vmin;
+    width: 65vmin;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+    cursor: pointer;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */    
+}
+#floatingQuote::-webkit-scrollbar {
+  display : none;
+}
+
+p {
+  display: inline-block;
+}
+
+#appBubble {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.5vmin;
+    border: 1px solid;
+    border-radius: 5px;
+   /* position: absolute;*/
+    text-align: center;
+    right: 10vw;
+    height: 5vmin;
+    width: 35vmin;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-transition: all 0.0s ease-in-out; /* set to 0.0s to stop spamming glitch */
+    -moz-transition: all 0.0s ease-in-out;
+    -o-transition: all 0.0s ease-in-out;
+    transition: all 0.0s ease-in-out;
+    overflow: scroll;
+    cursor: pointer;
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */    
+}
+
+#appBubble::-webkit-scrollbar {
+  display: none; /* For Chrome */
+}
+
+#appBubble ul {
+  border: none; 
+  background-color: transparent;
+  color: white;
+  font-size: 2.5vmin;
+  text-align: left; 
+  cursor: pointer; /* Make mouse pointer on hover */
+  list-style-position: inside;
+}
+
+#appBubble ul li {
+list-style: none;
+text-align: left;
+padding: 1rem;
+}
+
+#appBubble ul a {
+  text-decoration: none;
+  color: white; 
+}
+
+@media (max-width: 940px) { /* media query's come after the stuff you're changing 
+                                has been given css properties */
+
+    #aboutPage .bio {
+      backdrop-filter: blur(23px);
+      -webkit-backdrop-filter: blur(23px);  
+      width: 80vmin;
+    }
+    .ham-menu {
+      display: flex;
+    }
+    .navButtons {
+      display: none; 
+      width: 100%;
+    }
+    .myNavbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .name {
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.3rem;
+    }    
+    .navButtons ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    .navButtons li {
+      padding: 0.3rem;
+      text-align: center;
+    }
+    .navButtons.active {
+      display: flex;
+    }
+    ul li ul { /* for dropdown to make it look better on smaller screens (like mobile)*/
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      margin-top: 0rem;
+      left: inherit;
+      display: none;
+      border: none;
+      background: transparent;
+      padding: 0%;
+    }
+    .dropdown {
+      transition: transform 0.2s linear;
+    }       
+  .caption {
+     display: contents; /* to not have text stack with icons bc it's big on mobile */ 
+   }
+}
