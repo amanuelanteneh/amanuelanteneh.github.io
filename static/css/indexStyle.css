@@ -242,8 +242,8 @@ ul li ul li {  /* for dropdown */
     padding: 1%;
     /*left: 40vw;*/
     top: 29%;
-    height: 55vmin;
-    width: 65vmin;
+    height: 60vmin;
+    width: 70vmin;
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
     animation-name: float;
