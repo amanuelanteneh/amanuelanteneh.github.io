@@ -1,5 +1,8 @@
 
-var albumPics = ["https://assets1.ignimgs.com/thumbs/userUploaded/2020/7/14/halo3-multiplayerpcblogroll-1594760905664.jpg", 
+var albumPics = ["https://assets-prd.ignimgs.com/2023/01/23/mass-effect-legendary-edition-blogroll-1608133731075-1674478486620.jpg",
+                "https://assets1.ignimgs.com/thumbs/userUploaded/2017/3/14/bioticcombos-1489534140465.jpg",
+                "https://assets-prd.ignimgs.com/2022/02/23/eldenring-review-blogroll-1645576973659.jpg",
+                "https://assets1.ignimgs.com/thumbs/userUploaded/2020/7/14/halo3-multiplayerpcblogroll-1594760905664.jpg", 
                 "https://assets1.ignimgs.com/thumbs/userUploaded/2015/6/5/IGNPlaysLive_060515_1280-1433530262924.jpg",
                 "https://assets1.ignimgs.com/thumbs/userUploaded/2019/12/4/reachign-1575498991511.jpg",
                 "https://assets1.ignimgs.com/thumbs/userUploaded/2018/5/17/maxresdefault-1526594886194.jpg",
