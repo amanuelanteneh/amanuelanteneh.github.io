@@ -65,8 +65,8 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     text-align: center;
-    height: 35vmin;
-    width: 55vmin;
+    height: 45vmin;
+    width: 45vmin;
     font-family: 'Courier New', Courier, monospace;  
     font-size: 2.6vmin;
     overflow: hidden;
@@ -116,7 +116,8 @@ body {
 }
 
 .musicBubble:hover {
-      height: 40vmin;
+      height: 50vmin;
+      width: 50vmin;
       transition: 200ms linear;
 
 }
