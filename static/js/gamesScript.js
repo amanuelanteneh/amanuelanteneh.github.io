@@ -17,10 +17,12 @@ var gamePics = ["https://assets-prd.ignimgs.com/2021/12/09/masseffect-1639016658
                 "https://assets-prd.ignimgs.com/2022/01/22/star-wars-kotor-1-button-1-1642829727703.jpg",
                 "https://assets-prd.ignimgs.com/2022/01/08/star-wars-force-unleashed-1-button-1641600733695.jpg",
                 "https://assets-prd.ignimgs.com/2022/01/08/star-wars-force-unleashed-2-button-1641600311781.jpg",
+                'https://assets-prd.ignimgs.com/2021/12/28/batman-arkham-origins-button-crop-1640657700177.jpg',
+                'https://assets-prd.ignimgs.com/2021/12/08/batmanarkhamcity-1638989730511.jpg',
+                'https://assets1.ignimgs.com/2019/08/26/batman-arkham-knight---button-fin-1566850614415.jpg',
                 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2013/04/injustice_040913_1600.jpg',
                 'https://assets-prd.ignimgs.com/2023/06/10/injustice2-1024-576-1489108566238-1686441365530.jpg',
                 'https://assets1.ignimgs.com/thumbs/userUploaded/2022/2/1/destinythumb-1607620044156-1643715089550.jpeg',
-
    
 ];
 var gamePicElements = document.getElementsByClassName("album-pic");
