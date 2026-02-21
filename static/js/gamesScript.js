@@ -23,6 +23,9 @@ var gamePics = ["https://assets-prd.ignimgs.com/2021/12/09/masseffect-1639016658
                 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2013/04/injustice_040913_1600.jpg',
                 'https://assets-prd.ignimgs.com/2023/06/10/injustice2-1024-576-1489108566238-1686441365530.jpg',
                 'https://assets1.ignimgs.com/thumbs/userUploaded/2022/2/1/destinythumb-1607620044156-1643715089550.jpeg',
+                'https://assets-prd.ignimgs.com/2021/12/08/witcher3-1638987659679.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80',
+                'https://assets-prd.ignimgs.com/2020/07/16/cyberpunk-2077-button-fin-1594877291453.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80',
+                'https://assets1.ignimgs.com/2019/03/20/detroit-become-human---button-fin-1553106540549.jpg'
    
 ];
 var gamePicElements = document.getElementsByClassName("album-pic");
