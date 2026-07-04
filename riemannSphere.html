@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Riemann Sphere</title>
+
+    <link rel="icon" href='static/img/sphereIcon.png'>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js" defer></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src='static/js/riemannSphereScript.js' defer></script>
+
+</head>
+
+<style>
+
+img {
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display:block; 
+    height:auto;    
+}
+p {
+    font-size: 3vmin;
+    line-height: 1.8; 
+    text-align: left; 
+}
+button {
+    display: inline;
+    margin-left: 2rem;
+}
+
+.block { /* block class hold sections */
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    border-radius: 10px;
+    color: white;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 5%;
+    width: 90%;
+
+}
+
+.section { /* section class goes within block class divs */
+    display: inline-flex;
+    padding: 1rem;
+    width: 100%;
+}
+
+input { /* to align slider output values w slider */
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 13rem; 
+}
+
+output {
+        display: inline-block;
+        vertical-align: middle; 
+        font-family: 'Courier New', Courier, monospace;  
+        margin-left: 1rem;
+}
+
+svg {
+    position: absolute;
+}
+
+/* begin slider style */
+.slider {
+  -webkit-appearance: none;
+  height: 5px;
+  width: 340px; /* so its easier to use slider on phone */
+  margin-left: 0%;
+  background: #b9b7b7;
+  outline: white; 
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: white;
+  background: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  outline: white;
+  background: white;
+  cursor: pointer;
+}
+/* End slider style */
+#funcs {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333333;
+    color: white;
+    font-size: 2vmin;
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+}
+
+
+@media (max-width: 850px) { /* media query's come after the stuff you're changing 
+                                has been given css properties */
+    img {
+        width: 60%; 
+        margin-left: auto; 
+        margin-right: auto; 
+        display:block; 
+        height:auto;
+        }
+    body,html {
+        overflow: auto;
+        width: 130%;
+        }
+    .block { /* block class hold sections */
+        display: flex;
+        flex-direction: column;
+        border: 2px solid;
+        border-radius: 10px;
+        color: white;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        padding: 5%;
+        width: 100%;
+        overflow: scroll;
+        }
+
+}
+</style>
+
+<body lang=EN-US link=blue vlink="#954F72" style="background-color: #333333; margin:150;padding:0"> <!--For Dark mode-->
+<font color="white"> <!--For Dark mode-->
+<div id="particles-js" style="position:fixed; width:100%; height: 100%; z-index:-10; background: linear-gradient(to top left, rgb(196, 196, 196), #1a1919);"></div>
+<div class="block">
+<a href="index.html" style="width: 20vmin; color:white; font-size: 2.8vmin; border-radius: 1px; border: 1px solid white; padding: 4px; text-decoration: none; font-family: 'Courier New', Courier, monospace;">
+    Back to visualizers</a>
+<p>
+    In complex analysis the <a href="https://en.wikipedia.org/wiki/Riemann_sphere" target="_blank">Riemann Sphere</a> is a model of the extended complex plane. The extended
+    complex plane being the union of the complex plane and infinity denoted as \( \mathbb{C} \cup \{ \infty \} \).
+    The Riemann sphere is represented as the unit sphere sliced in half by the complex plane as shown below.
+</p>
+<img src='static/img/riemannDiagram.png'>
+
+    <p>
+        <br>Every point on the complex plane (\(z = x + iy\)) can be mapped to a point on the sphere, this point is called
+        the stereographic projection of \(z\). The projection of the point can be found by drawing a line from the point
+        on the plane to the point on the North pole of the sphere (the point at \( \infty \)) with the coordinates
+        \((0,0,1)\). The projection on the sphere is where the line touches the sphere. It's possible to find exact equations for
+        the coordinates \( (x_1,x_2,x_3) \) of the projection for any point \( (x,y,0) \) on the complex plane as
+        \[ x_1 = Re(z) \frac{2}{|z|^2 +1 },\quad x_2 = Im(z) \frac{2}{|z|^2 + 1}, \quad x_3 = \frac{|z|^2 - 1}{|z|^2 + 1} .\]
+        
+        Below is a simulator that demonstrates the relationship between functions
+        and their projections on the Riemann Sphere:<br><br>
+    </p>
+</div>
+
+<div class="block">
+    <div class="section">
+        <select id="funcs">
+            <option value="0">Line: mx + b</option>
+            <option value="1">Circle: &#177;&#8730;(r^2 - x^2)</option>
+            <option value="2">Parabola: ax^2 + c</option>
+            <option value="3">Sine: sin(x)</option>
+            <option value="4">Tangent: tan(x)</option>
+            <option value="5">Absolute Value: |x|</option>           
+            <option value="6">Secant: sec(x)</option>
+            <option value="10">Natural Log: ln(x+1)</option>
+            <option value="7">Exponential: e^x</option>
+            <option value="9">Ceiling: &#8968;x&#8969;</option>
+            <option value="8">Floor: &#8970;x&#8971;</option>           
+        </select>
+    </div>
+    <div class="section">
+        <input type = "range" min="-2" max="2" value="1" step="0.2" id="slider1" class="slider"/>
+        <output id="slider1Info">m: 1</output>
+    </div>
+    <div class="section">
+        <input type = "range" min="-2" max="2" value="0" step="0.2" id="slider2" class="slider"/>
+        <output id="slider2Info">b: 0</output>    
+    </div>
+    <div class="section">
+        <div id="riemannSphere"></div> 
+    </div>
+
+</div>
+</body>
+
+
+</html>
